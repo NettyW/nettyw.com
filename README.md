@@ -17,20 +17,12 @@ Animations respect the device's reduced-motion preference and can be paused
 using the header button. The preference is saved locally when storage is
 available. The main links and inline QR code also work without JavaScript.
 
-## Production
+## Publishing
 
-- Host: `root@nettyw.com`
-- Repository: `/root/nettyw.com`, branch `main`
-- nginx config: `/etc/nginx/sites-available/nettyw.com`
-- Web root: `/var/www/nettyw.com`
+This is a static site. Publish `index.html`, `resources/`, and `pages/` to the
+configured web root. Back up the current release first, preserve the existing
+directory permissions and ownership, publish assets first, and replace
+`index.html` last. No application build or restart is required.
 
-Push the reviewed commit, then pull with `git pull --ff-only` in the server
-repository and verify the commit. Back up the web root before publishing.
-Export tracked files with `git archive HEAD` into a staging directory and copy
-them with `rsync -rlt --delay-updates` into the web root, preserving its existing
-permissions and ownership (a temporary staging directory is private by default).
-Publish assets first and atomically replace `index.html` last. No nginx reload is needed
-for static asset changes. Check HTTPS, both destination links, QR dialog,
-mobile layout, and the custom 404 after deployment.
-
-To roll back, restore the saved web root with `rsync -a --delay-updates`.
+After publishing, check HTTPS, both destination links, the QR dialog, mobile
+layout, and the custom 404. Restore the backup to roll back.
