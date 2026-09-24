@@ -27,7 +27,9 @@ available. The main links and inline QR code also work without JavaScript.
 Push the reviewed commit, then pull with `git pull --ff-only` in the server
 repository and verify the commit. Back up the web root before publishing.
 Export tracked files with `git archive HEAD` into a staging directory and copy
-them with `rsync -a --delay-updates` into the web root. No nginx reload is needed
+them with `rsync -rlt --delay-updates` into the web root, preserving its existing
+permissions and ownership (a temporary staging directory is private by default).
+Publish assets first and atomically replace `index.html` last. No nginx reload is needed
 for static asset changes. Check HTTPS, both destination links, QR dialog,
 mobile layout, and the custom 404 after deployment.
 
