@@ -1,29 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <title>NettyW</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b0c10">
+    <meta name="description" content="Маленький уголок большого интернета. NettyW, Twitch-ботик и Telegram — всё на одной орбите.">
+    <title>NettyW — на своей орбите</title>
     <link rel="icon" type="image/svg+xml" href="resources/favicon3.svg">
-    <link rel="stylesheet" type="text/css" href="resources/styles.css?v=2">
+    <link rel="stylesheet" href="resources/home.css?v=3">
+    <script src="resources/home.js?v=3" defer></script>
 </head>
 <body>
-	<div class="container">
-		<div class="hero-title">Привет.</div>
-		<div class="content">
-			<a class="action-link twitch-link" href="https://smarteblanchik.nettyw.com/" target="_blank" rel="noopener noreferrer">
-				<img class="action-icon" src="resources/favicon.svg" width="28" height="28" alt="Иконка Twitch-бота">
-				<span>Twitch-ботик</span>
-			</a>
+    <div class="space" aria-hidden="true"><div class="starlight"></div><div class="shooting-star"></div></div>
+    <div class="site-shell">
+        <header class="site-header">
+            <a class="wordmark" href="/" aria-label="NettyW — главная"><img src="resources/favicon3.svg" width="30" height="30" alt="">netty<span>w</span><span class="brand-dot">.</span></a>
+            <div class="header-right">
+                <span class="orbit-status"><span></span>на своей орбите</span>
+                <button class="motion-toggle" type="button" aria-label="Приостановить анимацию" aria-pressed="false" title="Приостановить анимацию" hidden>
+                    <svg class="pause-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7 5v10M13 5v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <svg class="play-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m7 4 9 6-9 6V4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                </button>
+            </div>
+        </header>
 
-			<div class="telegram-section">
-				<a class="action-link telegram-link" href="https://t.me/nettywv" target="_blank" rel="noopener noreferrer">
-					<img class="action-icon telegram-icon" src="resources/telegram.png" width="32" height="32" alt="Логотип Telegram">
-					<span>Telegram</span>
-				</a>
-				<img class="telegram-qr" src="resources/tgc.png" width="220" height="220" alt="QR-код Telegram">
-			</div>
-		</div>
-	</div>
+        <main>
+            <section class="hero" aria-labelledby="greeting">
+                <div class="hero-copy">
+                    <p class="eyebrow"><span class="tiny-star"><svg class="glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2v20M2 12h20M5 5l14 14M5 19 19 5" stroke="currentColor" stroke-width="1.5"/></svg></span> ЭЙ, ЭТО NETTYW</p>
+                    <h1 id="greeting">Привет<span class="greeting-dot">.</span></h1>
+                    <p class="intro">Мой маленький уголок<br>большого интернета.</p>
+                    <p class="welcome">Устраивайся. Здесь свои.</p>
+                </div>
+                <div class="universe">
+                    <div class="universe-glow" aria-hidden="true"></div>
+                    <div class="orbital-system" aria-hidden="true">
+                        <div class="orbit orbit-outer"><i></i></div>
+                        <div class="orbit orbit-inner"><i></i></div>
+                        <span class="space-plus plus-one">+</span><span class="space-plus plus-two">+</span>
+                        <span class="sparkle sparkle-one"><svg class="glyph" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 1 2.8 8.2L23 12l-8.2 2.8L12 23l-2.8-8.2L1 12l8.2-2.8Z"/></svg></span><span class="sparkle sparkle-two"><svg class="glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path stroke="currentColor" stroke-width="1.2" d="m12 1 2.8 8.2L23 12l-8.2 2.8L12 23l-2.8-8.2L1 12l8.2-2.8Z"/></svg></span>
+                        <span class="small-planet"></span>
+                    </div>
+                    <div class="mascot-position">
+                        <div class="mascot-float">
+                            <button class="mascot" type="button" aria-label="Передать космический привет котику" disabled>
+                                <span class="mascot-halo" aria-hidden="true"></span>
+                                <img src="resources/favicon.svg" width="226" height="226" alt="Котик-планета">
+                                <span class="mascot-spark" aria-hidden="true"><svg class="glyph" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 1 2.8 8.2L23 12l-8.2 2.8L12 23l-2.8-8.2L1 12l8.2-2.8Z"/></svg></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="orbit-caption" aria-hidden="true"><span></span> где-то в интернете</div>
+                </div>
+            </section>
+
+            <section class="destinations" aria-label="Мои ссылки">
+                <div class="section-heading"><span>ДВЕ ТОЧКИ НА КАРТЕ</span><span class="heading-line"></span><span aria-hidden="true"><svg class="glyph down-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+                <div class="destination-grid">
+                    <a class="destination destination-twitch" href="https://smarteblanchik.nettyw.com/" target="_blank" rel="noopener noreferrer">
+                        <div class="card-top"><span class="service-icon bot-icon"><img src="resources/favicon.svg" width="28" height="28" alt=""></span><span class="card-tag">МОЙ ПРОЕКТ</span><span class="link-arrow" aria-hidden="true"><svg class="glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+                        <h2>Twitch-ботик</h2>
+                        <p>Маленький бот. Большой характер.</p>
+                        <span class="card-bottom">Познакомиться <span aria-hidden="true"><svg class="glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+                        <span class="card-decoration" aria-hidden="true"><svg class="glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2v20M2 12h20M5 5l14 14M5 19 19 5" stroke="currentColor" stroke-width="1.5"/></svg></span>
+                    </a>
+                    <article class="destination destination-telegram">
+                        <a class="telegram-link" href="https://t.me/nettywv" target="_blank" rel="noopener noreferrer">
+                            <div class="card-top"><span class="service-icon telegram-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m20.6 4.1-3.1 15c-.2 1.1-.9 1.3-1.8.8l-4.8-3.6-2.3 2.2c-.2.3-.5.5-1 .5l.4-4.9 9-8.1c.4-.4-.1-.6-.6-.3L5.3 12.6.6 11.1c-1-.3-1-1 .2-1.5L19.2 2.5c.9-.3 1.7.2 1.4 1.6Z" transform="translate(1 1) scale(.94)"/></svg></span><span class="card-tag">НА СВЯЗИ</span><span class="link-arrow" aria-hidden="true"><svg class="glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+                            <h2>Telegram</h2>
+                            <p>Для приветов и хороших идей.</p>
+                            <span class="card-bottom">@nettywv <span aria-hidden="true"><svg class="glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+                        </a>
+                        <button class="qr-preview" type="button" aria-label="Увеличить QR-код Telegram" aria-haspopup="dialog" disabled>
+                            <span class="qr-image"><img src="resources/tgc.png" width="92" height="92" alt="QR-код Telegram @nettywv"></span>
+                            <span class="qr-caption">сканируй <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 2H2v4m8-4h4v4M2 10v4h4m8-4v4h-4" stroke="currentColor" stroke-width="1.2"/></svg></span>
+                        </button>
+                    </article>
+                </div>
+            </section>
+            <p class="closing-note"><span aria-hidden="true"><svg class="glyph" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 1 2.8 8.2L23 12l-8.2 2.8L12 23l-2.8-8.2L1 12l8.2-2.8Z"/></svg></span> Хорошо, что ты заглянул.</p>
+        </main>
+
+        <footer class="site-footer"><span>© <span id="year">2026</span> NettyW</span><span>С планеты Земля <span class="footer-star" aria-hidden="true"><svg class="glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2v20M2 12h20M5 5l14 14M5 19 19 5" stroke="currentColor" stroke-width="1.5"/></svg></span></span></footer>
+    </div>
+
+    <dialog class="qr-dialog" aria-labelledby="qr-title">
+        <button class="dialog-close" type="button" aria-label="Закрыть QR-код" autofocus><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+        <p class="eyebrow">ПРОДОЛЖИМ НА ЗЕМЛЕ</p>
+        <h2 id="qr-title">Увидимся в Telegram.</h2>
+        <p class="dialog-subtitle">Наведи камеру — и мы на связи.</p>
+        <img class="dialog-qr" src="resources/tgc.png" width="260" height="260" alt="QR-код со ссылкой https://t.me/nettywv">
+        <a class="dialog-link" href="https://t.me/nettywv" target="_blank" rel="noopener noreferrer">Открыть @nettywv <span aria-hidden="true"><svg class="glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </dialog>
+    <div class="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
